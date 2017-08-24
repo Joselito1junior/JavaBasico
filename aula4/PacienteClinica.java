@@ -1,3 +1,7 @@
+/**
+ * Authon: Joselito Junior
+ */
+
 package br.unipe.java.aula4;
 
 import java.util.Scanner;
