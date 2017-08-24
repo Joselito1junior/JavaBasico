@@ -1,10 +1,21 @@
 package br.unipe.java.aula3;
 
+/**
+ * 
+ */
 import java.util.Scanner;
 
 import br.unipe.java.aula2.Cachorro;
-
+/**
+ * 
+ * @author Junior
+ *
+ */
 public class UsaCerveja {
+	/**
+	 * 
+	 * @param args
+	 */
 	public static void main(String[] args) {
 		
 		int cervejas = 0;
@@ -12,7 +23,7 @@ public class UsaCerveja {
 		
 		System.out.println("Informe a quantidade de cervejas");
 		cervejas = leitor.nextInt();
-		
+		 
 		while(cervejas > 0)
 		{
 			System.out.println("Existem " + cervejas + " na freezer...");
