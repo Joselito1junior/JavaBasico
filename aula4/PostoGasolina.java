@@ -11,8 +11,8 @@ public class PostoGasolina {
 		Scanner leitor = new Scanner(System.in);
 		
 		String nome;
-		double litroGasolina;
-		double qtdRefri;
+		float litroGasolina;
+		float qtdRefri;
 		double total;
 		
 		System.out.println("Informe seu nome: ");
