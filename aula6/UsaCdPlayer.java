@@ -6,7 +6,6 @@ public class UsaCdPlayer {
 		CdPlayer cd = new CdPlayer();
 		
 		cd.ligar();
-		cd.
 		
 	}
 }
