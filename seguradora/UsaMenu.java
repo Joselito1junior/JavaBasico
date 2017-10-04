@@ -14,7 +14,7 @@ public class UsaMenu {
 		do
 		{
 			System.out.println("----------------------");
-			System.out.println("SEGURADORA SANTA LUZIA");
+			System.out.println("SEGURADORA ARUBA 22");
 			System.out.println("----------------------");
 			menu.exibeMenu();
 			

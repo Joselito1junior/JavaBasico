@@ -24,6 +24,4 @@ public class ImovelBasico{
 	public void setValorImovel(float valorImovel) {
 		this.valorImovel = valorImovel;
 	}
-	
-	
 }
