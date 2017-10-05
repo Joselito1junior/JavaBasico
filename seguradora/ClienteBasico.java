@@ -2,9 +2,8 @@ package br.unipe.java.seguradora;
 
 public class ClienteBasico {
 	private String nome;
-	private char sexo;
 	private byte idade;
-	private int telefone;
+	private Long telefone;
 	
 	public String getNome() {
 		return nome;
@@ -12,22 +11,16 @@ public class ClienteBasico {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public char getSexo() {
-		return sexo;
-	}
-	public void setSexo(char sexo) {
-		this.sexo = sexo;
-	}
 	public byte getIdade() {
 		return idade;
 	}
 	public void setIdade(byte idade) {
 		this.idade = idade;
 	}
-	public int getTelefone() {
+	public long getTelefone() {
 		return telefone;
 	}
-	public void setTelefone(int telefone) {
+	public void setTelefone(long telefone) {
 		this.telefone = telefone;
 	}
 }

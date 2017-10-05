@@ -34,7 +34,12 @@ public class UsaCliente {
 		}while(opcao < 1 || opcao > 3);
 	}
 	
-	void cadastroClientes()
+	void cadastroClientesPf()
+	{
+		
+	}
+	
+	void cadastroClientesPj()
 	{
 		
 	}
