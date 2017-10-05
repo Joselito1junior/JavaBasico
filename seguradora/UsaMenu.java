@@ -1,25 +1,23 @@
 package br.unipe.java.seguradora;
 
-import java.util.Scanner;
-
 public class UsaMenu {
 	public static void main(String[] args) {
-		
-		int opcao;
-		
-		Scanner leitor = new Scanner(System.in);
-		
+						
 		MenuPrincipal menu = new MenuPrincipal();
+		int opcao;
+		int numCliente = 0; //Guarda o inidice com o número de clientes cadastrados
 		
 		do
 		{
-			System.out.println("----------------------");
-			System.out.println("SEGURADORA ARUBA 22");
-			System.out.println("----------------------");
-			menu.exibeMenu();
+			opcao = menu.exibeMenu();
 			
-			System.out.print("Escolha uma opção: ");
-			opcao = leitor.nextInt();
+			switch(opcao)
+			{
+				case 1: UsaCliente cliente = new UsaCliente();
+						int clienteTipo = cliente.tipoCliente();
+						numCliente++;
+						break;
+			}
 			
 		}while(opcao != 8);
 		System.out.println("Você Saiu! Até mais.");

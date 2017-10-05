@@ -1,9 +1,16 @@
 package br.unipe.java.seguradora;
 
 public class ImovelResidencial extends ImovelBasico{
-	char zona; //u - urbana / s - suburbana / r - rural
-	char tipo; //c - casa / a - apartamento		
+	private char zona; //u - urbana / s - suburbana / r - rural
+	private char tipo; //c - casa / a - apartamento		
+	private SeguroResidencial seguro = new SeguroResidencial();
 	
+	public SeguroResidencial getSeguro() {
+		return seguro;
+	}
+	public void setSeguro(SeguroResidencial seguro) {
+		this.seguro = seguro;
+	}
 	PessoaFisica cliente = new PessoaFisica();
 	
 	public char getZona() {

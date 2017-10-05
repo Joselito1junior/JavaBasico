@@ -1,10 +1,10 @@
 package br.unipe.java.seguradora;
 
 public class ClienteBasico {
-	String nome;
-	char sexo;
-	byte idade;
-	int telefone;
+	private String nome;
+	private char sexo;
+	private byte idade;
+	private int telefone;
 	
 	public String getNome() {
 		return nome;

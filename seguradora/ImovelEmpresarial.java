@@ -1,11 +1,18 @@
 package br.unipe.java.seguradora;
 
 public class ImovelEmpresarial {
-	int numFuncionarios;
-	int numVisitasDiarias;
-	char Ramo; //c - comercio / i - industria / a - agropecuaria
-	PessoaJuridica cliente = new PessoaJuridica();
+	private int numFuncionarios;
+	private int numVisitasDiarias;
+	private char Ramo; //c - comercio / i - industria / a - agropecuaria
+	private PessoaJuridica cliente = new PessoaJuridica();
+	private SeguroEmpresarial seguro = new SeguroEmpresarial();
 	
+	public SeguroEmpresarial getSeguro() {
+		return seguro;
+	}
+	public void setSeguro(SeguroEmpresarial seguro) {
+		this.seguro = seguro;
+	}
 	public int getNumFuncionarios() {
 		return numFuncionarios;
 	}
