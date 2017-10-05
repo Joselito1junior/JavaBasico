@@ -2,9 +2,9 @@ package br.unipe.java.seguradora;
 
 public class ImovelBasico{
 	
-	byte qtdComodos;
-	String endereco;
-	float valorImovel;
+	private byte qtdComodos;
+	private String endereco;
+	private float valorImovel;
 	
 	public byte getQtdComodos() {
 		return qtdComodos;

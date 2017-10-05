@@ -24,8 +24,4 @@ public class ImovelResidencial extends ImovelBasico{
 	public void setCliente(PessoaFisica cliente) {
 		this.cliente = cliente;
 	}
-	
-	
-	
-	
 }
