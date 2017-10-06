@@ -6,8 +6,6 @@ public class PessoaFisica extends ClienteBasico{
 	/*PessoaFisica(String cpf) {
 		this.CPF = cpf;
 	}*/
-
-	
 	
 	public String getCPF() {
 		return CPF;

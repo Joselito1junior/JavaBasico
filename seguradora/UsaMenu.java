@@ -1,6 +1,5 @@
 package br.unipe.java.seguradora;
 
-import java.util.ArrayList;
 import java.util.Scanner;
 
 public class UsaMenu {
@@ -8,9 +7,7 @@ public class UsaMenu {
 						
 		MenuPrincipal menu = new MenuPrincipal();
 		int opcao;
-		int numCliente = 0; //Guarda o inidice com o número de clientes cadastrados
 		Scanner leitor = new Scanner(System.in);
-		
 		
 		do
 		{
@@ -24,12 +21,32 @@ public class UsaMenu {
 						if(clienteTipo == 1)
 						{			
 							ImovelResidencial clientePf = new ImovelResidencial();
+							PessoaFisica perfil = new PessoaFisica();
 							
-							System.out.println("Digite seu nome:");
-							clientePf.setCliente();
+							System.out.print("Digite seu nome: ");
+							perfil.setNome(leitor.nextLine());
+							System.out.print("Digite sua idade: ");
+							perfil.setIdade(leitor.nextByte());		
+							System.out.print("Digite um telefone: ");
+							perfil.setTelefone(leitor.nextLong());								
+							System.out.print("Digite seu CPF (hahaha): ");
+							perfil.setCPF(leitor.nextLine());
 							
+							System.out.print("Qual a zona do imovel (Urbana/Rural/Suburbana): ");
+							clientePf.setZona(leitor.nextLine());
+							System.out.print("Qual o tipo de habitação(Casa/Apartamento): ");
+							clientePf.setTipo(leitor.nextLine());
+							System.out.print("Qual o endereço(Rua/Bairro/Estado/Numero)");
+							clientePf.setEndereco(leitor.nextLine());
+							System.out.print("Qual a quantidade de comodos do imovel: ");
+							clientePf.setQtdComodos(leitor.nextByte());
+							System.out.print("Qual o valor do Imovel: ");
+							clientePf.setValorImovel(leitor.nextFloat());
 							
-
+							clientePf.setCliente(perfil);							
+							cliente.listaClientes(clientePf);
+							
+						}
 						else if(clienteTipo == 2)
 						{
 							
@@ -39,30 +56,11 @@ public class UsaMenu {
 							
 						}
 						break;
-			}
+					}
 			
 		}while(opcao != 8);
+		
+		leitor.close();
 		System.out.println("Você Saiu! Até mais.");
 	}
 }
-
-//PessoaFisica clientePf = new PessoaFisica();
-/*
- * 	System.out.println("Digite seu nome:");
-	clientePf.setNome(leitor.nextLine());
-	System.out.println("Digite seu CPF:");
-	clientePf.setCPF(leitor.nextLine());
-	System.out.println("Digite seu Idade:");
-	clientePf.setIdade(leitor.nextByte());
-	System.out.println("Digite seu Telefone:");
-	clientePf.setTelefone(leitor.nextLong());
-*/
-
-//ArrayList<PessoaFisica> pfList = new ArrayList<>(); //lista de pessoas
-
-//pfList.add(new PessoaFisica("3123123"));
-//pfList.get(1).
-
-//pfList.add(pf);
-//for(PessoaFiscica pf : pfList);
-//pfList.get(100);

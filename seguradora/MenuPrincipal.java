@@ -11,7 +11,7 @@ public class MenuPrincipal {
 		Scanner leitor = new Scanner(System.in);
 		
 		System.out.println("----------------------");
-		System.out.println("SEGURADORA ARUBA 22");
+		System.out.println("SEGURADORA");
 		System.out.println("----------------------");
 		System.out.println("[MENU PRINCIPAL]");
 		

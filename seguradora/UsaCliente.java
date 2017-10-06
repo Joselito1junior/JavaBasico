@@ -7,6 +7,8 @@ public class UsaCliente {
 	
 	int opcao = 0; 
 	Scanner leitor = new Scanner(System.in);
+	ImovelResidencial clientePf = new ImovelResidencial();
+	
 	
 	int tipoCliente()
 	{
@@ -44,8 +46,16 @@ public class UsaCliente {
 		
 	}
 	
-	void listaClientes()
+	void listaClientes(ImovelResidencial clientePf)
 	{
-		
+		System.out.println("Nome: " + clientePf.getCliente().getNome());
+		System.out.println("Idade: " + clientePf.getCliente().getIdade());
+		System.out.println("Telefone: " + clientePf.getCliente().getTelefone());
+		System.out.println("CPF: " + clientePf.getCliente().getCPF());
+		System.out.println("Zona: " + clientePf.getZona());
+		System.out.println("Tipo: " + clientePf.getTipo());
+		System.out.println("Endereço: " + clientePf.getEndereco());
+		System.out.println("Qtd. Comodos: " + clientePf.getQtdComodos());
+		System.out.println("Valor do Imovel: " + clientePf.getValorImovel());
 	}
 }
