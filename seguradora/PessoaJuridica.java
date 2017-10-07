@@ -1,13 +1,13 @@
 package br.unipe.java.seguradora;
 
 public class PessoaJuridica extends ClienteBasico{
-	private String CNPJ;
+	private long CNPJ;
 
-	public String getCNPJ() {
+	public long getCNPJ() {
 		return CNPJ;
 	}
 
-	public void setCNPJ(String cNPJ) {
+	public void setCNPJ(long cNPJ) {
 		CNPJ = cNPJ;
 	}
 	

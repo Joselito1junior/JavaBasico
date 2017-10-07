@@ -31,7 +31,6 @@ package br.unipe.java.seguradora;
 			return cliente;
 		}
 		public void setCliente(PessoaFisica cliente) {
-			
 			this.cliente = cliente;
 		}
 }

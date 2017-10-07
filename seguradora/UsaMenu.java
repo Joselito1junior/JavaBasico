@@ -8,6 +8,8 @@ public class UsaMenu {
 		MenuPrincipal menu = new MenuPrincipal();
 		int opcao;
 		Scanner leitor = new Scanner(System.in);
+		ImovelResidencial[] clientePf = new ImovelResidencial[10000];//Array que guarda todas as pessoas fisicas
+		int clienteIndex = 0;
 		
 		do
 		{
@@ -20,32 +22,32 @@ public class UsaMenu {
 						
 						if(clienteTipo == 1)
 						{			
-							ImovelResidencial clientePf = new ImovelResidencial();
 							PessoaFisica perfil = new PessoaFisica();
+							ImovelResidencial pessoaFisica = new ImovelResidencial(); 
 							
 							System.out.print("Digite seu nome: ");
 							perfil.setNome(leitor.nextLine());
 							System.out.print("Digite sua idade: ");
 							perfil.setIdade(leitor.nextByte());		
 							System.out.print("Digite um telefone: ");
-							perfil.setTelefone(leitor.nextLong());								
-							System.out.print("Digite seu CPF (hahaha): ");
-							perfil.setCPF(leitor.nextLine());
+							perfil.setTelefone(leitor.nextLong());		
+							System.out.print("Digite seu CPF: ");
+							perfil.setCPF(leitor.nextLong());
 							
 							System.out.print("Qual a zona do imovel (Urbana/Rural/Suburbana): ");
-							clientePf.setZona(leitor.nextLine());
+							pessoaFisica.setZona(leitor.next());
 							System.out.print("Qual o tipo de habitação(Casa/Apartamento): ");
-							clientePf.setTipo(leitor.nextLine());
-							System.out.print("Qual o endereço(Rua/Bairro/Estado/Numero)");
-							clientePf.setEndereco(leitor.nextLine());
-							System.out.print("Qual a quantidade de comodos do imovel: ");
-							clientePf.setQtdComodos(leitor.nextByte());
+							pessoaFisica.setTipo(leitor.next());
+							System.out.print("Qual o endereço(Ex: Rua, Bairro, Cidade-ES, Numero)");
+							pessoaFisica.setEndereco(leitor.next());
+							System.out.print("Qual a quantidade de comodos de imovel: ");
+							pessoaFisica.setQtdComodos(leitor.nextByte());
 							System.out.print("Qual o valor do Imovel: ");
-							clientePf.setValorImovel(leitor.nextFloat());
+							pessoaFisica.setValorImovel(leitor.nextFloat());
 							
-							clientePf.setCliente(perfil);							
-							cliente.listaClientes(clientePf);
-							
+							pessoaFisica.setCliente(perfil);							
+							clientePf[clienteIndex] = pessoaFisica;
+							clienteIndex++;
 						}
 						else if(clienteTipo == 2)
 						{
