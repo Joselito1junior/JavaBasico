@@ -11,7 +11,7 @@ public class ClienteBasico {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public byte getIdade() {
+	public byte getIdade(){
 		return idade;
 	}
 	public void setIdade(byte idade) {
