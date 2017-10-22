@@ -13,7 +13,6 @@ public class ClienteBasico {
 	}
 	public byte getIdade() {
 		return idade;
-		
 	}
 	public void setIdade(byte idade) {
 		this.idade = idade;
