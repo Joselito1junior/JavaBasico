@@ -16,7 +16,6 @@ public class ClienteBasico {
 	}
 	public void setIdade(byte idade) {
 		this.idade = idade;
-		
 	}
 	public long getTelefone() {
 		return telefone;
