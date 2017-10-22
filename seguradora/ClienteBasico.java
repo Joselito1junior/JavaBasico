@@ -22,5 +22,6 @@ public class ClienteBasico {
 	}
 	public void setTelefone(long telefone) {
 		this.telefone = telefone;
+		
 	}
 }
