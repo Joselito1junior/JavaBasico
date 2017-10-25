@@ -3,7 +3,8 @@ package br.unipe.java.aula10;
 public class OperadorTernario {
 
 	public static void main(String[] args) {
-		int y = 80;
+		int y = 5;
+		//int y = 80;
 		int x = (y == 5)? 50 : 100;
 		System.out.println(x);
 		
@@ -26,7 +27,8 @@ public class OperadorTernario {
 			System.out.print(num);
 		
 			
-		//x = (5 == y)? y > 50 ? 60 : 90 : 100;
+		x = (5 == y)? y > 50 ? 60 : 90 : 100;
+		System.out.println(x);
 	}
 		
 }
