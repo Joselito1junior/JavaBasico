@@ -53,13 +53,12 @@ public class UsaMenu {
 						{
 							
 						}
-						else
+						else 
 						{
 							
 						}
 						break;
-					}
-			
+					}			
 		}while(opcao != 8);
 		
 		leitor.close();

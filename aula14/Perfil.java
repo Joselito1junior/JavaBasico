@@ -17,11 +17,9 @@ public class Perfil {
 		this.nome = nome;
 	}
 	
-	
 	public Perfil(int id, String nome) {
 		super();
 		this.id = id;
 		this.nome = nome;
 	}
-	
 }

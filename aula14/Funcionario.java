@@ -27,4 +27,3 @@ public class Funcionario extends Pessoa{
 		super.finalize();
 	}
 }
-
