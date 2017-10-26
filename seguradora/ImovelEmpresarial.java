@@ -37,6 +37,10 @@ public class ImovelEmpresarial {
 	public void setCliente(PessoaJuridica cliente) {
 		this.cliente = cliente;
 	}
+	public void setRamo(String next) {
+		// TODO Auto-generated method stub
+		
+	}
 	
 	
 }

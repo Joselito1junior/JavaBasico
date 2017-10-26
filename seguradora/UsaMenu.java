@@ -9,7 +9,9 @@ public class UsaMenu {
 		int opcao;
 		Scanner leitor = new Scanner(System.in);
 		ImovelResidencial[] clientePf = new ImovelResidencial[10000];//Array que guarda todas as pessoas fisicas
-		int clienteIndex = 0;
+		int clienteIndexresidencial = 0;
+		ImovelEmpresarial[] clientePj = new ImovelEmpresarial[10000];
+		int clienteIndexempresarial = 0;
 		
 		do
 		{
@@ -22,18 +24,17 @@ public class UsaMenu {
 						
 						if(clienteTipo == 1)
 						{			
-							PessoaFisica perfil = new PessoaFisica();
-							ImovelResidencial pessoaFisica = new ImovelResidencial(); 
+							PessoaFisica perfilPf = new PessoaFisica();
+							ImovelResidencial pessoaFisica = new ImovelResidencial();
 							
 							System.out.print("Digite seu nome: ");
-							perfil.setNome(leitor.nextLine());
+							perfilPf.setNome(leitor.nextLine());
 							System.out.print("Digite sua idade: ");
-							perfil.setIdade(leitor.nextByte());		
+							perfilPf.setIdade(leitor.nextByte());		
 							System.out.print("Digite um telefone: ");
-							perfil.setTelefone(leitor.nextLong());		
+							perfilPf.setTelefone(leitor.nextLong());		
 							System.out.print("Digite seu CPF: ");
-							perfil.setCPF(leitor.nextLong());
-							
+							perfilPf.setCPF(leitor.nextLong());
 							System.out.print("Qual a zona do imovel (Urbana/Rural/Suburbana): ");
 							pessoaFisica.setZona(leitor.next());
 							System.out.print("Qual o tipo de habitação(Casa/Apartamento): ");
@@ -45,20 +46,65 @@ public class UsaMenu {
 							System.out.print("Qual o valor do Imovel: ");
 							pessoaFisica.setValorImovel(leitor.nextFloat());
 							
-							pessoaFisica.setCliente(perfil);							
-							clientePf[clienteIndex] = pessoaFisica;
-							clienteIndex++;
+							pessoaFisica.setCliente(perfilPf);							
+							clientePf[clienteIndexresidencial] = pessoaFisica;
+							clienteIndexresidencial++;
 						}
 						else if(clienteTipo == 2)
 						{
+							PessoaJuridica perfilPj = new PessoaJuridica();
+							ImovelEmpresarial pessoaEmpresarial = new ImovelEmpresarial();
 							
+							System.out.println("Informe o nome da Empresa: ");
+							perfilPj.setNome(leitor.nextLine());
+							System.out.println("Informe o telefone geral da Empresa: ");
+							perfilPj.setTelefone(leitor.nextLong());
+							System.out.println("Informe o CNPJ da Empresa, sem traço ou ponto: ");
+							perfilPj.setCNPJ(leitor.nextByte());							
+							System.out.println("Informe o nº de funcionarios na Empresa: ");
+							pessoaEmpresarial.setNumFuncionarios(leitor.nextByte());
+							System.out.println("Informe o nº médio de visitas por dia: ");
+							pessoaEmpresarial.setNumVisitasDiarias(leitor.nextByte());
+							System.out.println("Informe em qual ramo a empresa atua <C-comércio>,<I-indústria> ou <A-agropecuária>: ");
+							pessoaEmpresarial.setRamo(leitor.next());
+							System.out.println("");
+							//pessoaEmpresarial.setSeguro(seguro);
+							
+							pessoaEmpresarial.setCliente(perfilPj);
+							clientePj[clienteIndexempresarial] = pessoaEmpresarial;
+							clienteIndexempresarial++;
 						}
-						else 
+						else
 						{
 							
 						}
 						break;
-					}			
+						
+				case 2:{
+					
+				}break;
+				
+				case 3:{
+					
+				}break;
+				
+				case 4:{
+					
+				}break;
+				
+				case 5:{
+					
+				}break;
+				
+				case 6:{
+					
+				}break;
+				
+				case 7:{
+					
+				}
+				}
+			
 		}while(opcao != 8);
 		
 		leitor.close();
