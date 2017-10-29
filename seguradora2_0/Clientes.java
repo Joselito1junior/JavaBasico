@@ -1,12 +1,25 @@
 package br.unipe.java.seguradora2_0;
 
+import java.util.ArrayList;
+
 public class Clientes {
-	String cep;
-	int numero;
-	float valor;
-	String nome;
-	String zona;
+	private String cep;
+	private int numero;
+	private float valor;
+	private String nome;
+	private byte zona;
 	
+	private ArrayList<Integer> sinistro = new ArrayList <>();
+	
+	public void addSinistro(int ocorrencia){
+		this.sinistro.add(ocorrencia);
+	}
+	public byte getZona() {
+		return zona;
+	}
+	public void setZona(byte zona) {
+		this.zona = zona;
+	}
 	public String getCep() {
 		return cep;
 	}
@@ -31,10 +44,7 @@ public class Clientes {
 	public void setNome(String nome) {
 		this.nome = nome;
 	}
-	public String getZona() {
-		return zona;
-	}
-	public void setZona(String zona) {
-		this.zona = zona;
-	}
+	
+	
+	
 }
