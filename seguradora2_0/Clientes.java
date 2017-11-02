@@ -8,7 +8,14 @@ public class Clientes {
 	private float valor;
 	private String nome;
 	private byte zona;
+	private float seguro;
 	
+	public float getSeguro() {
+		return seguro;
+	}
+	public void setSeguro(float seguro) {
+		this.seguro = seguro;
+	}
 	private ArrayList<Integer> sinistro = new ArrayList <>();
 	
 	public void addSinistro(int ocorrencia){
@@ -43,8 +50,5 @@ public class Clientes {
 	}
 	public void setNome(String nome) {
 		this.nome = nome;
-	}
-	
-	
-	
+	}	
 }

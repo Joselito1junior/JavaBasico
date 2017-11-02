@@ -30,7 +30,7 @@ public class ClientesPJ extends Clientes{
 	}
 	
 	public void cadastraCliPJ() {
-		/*
+		
 		System.out.print("Digite o nome do cliente: ");
 		setNome(leitor.next());
 		System.out.print("Digite o CEP do imóvel: ");
@@ -46,9 +46,43 @@ public class ClientesPJ extends Clientes{
 		setNumFuncionarios(leitor.nextInt());
 		System.out.print("Digite o numero de visitas diária: ");
 		setNumVisitasDia(leitor.nextInt());
-		System.out.print("Digite o ramo de atuação\n1 - Comércio\n2 - Industria\n3 - Agropecuaria\nDigite uma opção: ");
-		setRamo(leitor.nextByte());
-		*/
-	}
+		System.out.print("Digite o ramo de atuação:\n1 - Industria\n2 - Comercio\n3 - Agropecuaria\nDigite uma opção: ");
+		setRamo(leitor.nextByte());	
 	
-}
+	
+	float calculoSeguroPJ;
+	
+	float valor = getValor();
+	float valorUsado = (valor*4)/100;
+	
+	int numFuncionarios = (int) getNumFuncionarios();
+	int numFuncionariosUsado = numFuncionarios/10; 
+	
+	int numVisitas = (int) getNumVisitasDia();
+	int numVisitasUsada = numVisitas/200;
+	
+	byte ramo = getRamo();
+	
+	
+	if(ramo==1) {
+		
+		double calculaSeguroPJ = valorUsado+(0.002*numFuncionariosUsado)+(numVisitasUsada*0.003)+valor*0.01;
+		calculoSeguroPJ = (float) calculaSeguroPJ;
+		setSeguro(calculoSeguroPJ);
+
+	}else if(ramo==2) {
+		
+		double calculaSeguroPJ = valorUsado+(0.003*numFuncionariosUsado)+(numVisitasUsada*0.003)+valor*0.005;
+		calculoSeguroPJ = (float) calculaSeguroPJ;
+		setSeguro(calculoSeguroPJ);
+
+	}else if(ramo==3) {
+		
+		double calculaSeguroPJ = valorUsado+(0.003*numFuncionariosUsado)+(numVisitasUsada*0.003);
+		calculoSeguroPJ = (float) calculaSeguroPJ;
+		setSeguro(calculoSeguroPJ);
+
+	}else
+		System.out.println("Não foi possível fazer o calculo do seguro, por valores inválidos.");
+	
+}}
