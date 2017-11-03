@@ -14,7 +14,5 @@ public class EscreverPropertiesTest {
 		propeties.setProperty("usuario", "root");
 		
 		propeties.store(new FileOutputStream("configuracao.prpeties"), "configuração do banco de dados");
-		
-		
 	}
 }
