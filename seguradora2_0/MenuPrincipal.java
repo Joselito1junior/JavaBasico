@@ -10,11 +10,7 @@ public class MenuPrincipal
 		ArrayList<ClientesPJ> listaPJ = new ArrayList<>();
 		
 		ClientesPF pf = new ClientesPF();
-		ClientesPF pf1 = new ClientesPF();
 		ClientesPJ pj = new ClientesPJ();
-		
-		byte teste = 0;
-		
 
 		byte opcao = 0;
 		byte opc = -1; //Armazena uma das opções dentro do switch
@@ -44,11 +40,13 @@ public class MenuPrincipal
 						opc = leitor.nextByte();
 						if(opc == 1) 
 						{
-							pf.cadastraCliPF();						
+							pf = new ClientesPF();
+							pf.cadastraCliPF();
 							listaPF.add(pf);
 						}
 						else if(opc == 2)
 						{
+							pj = new ClientesPJ();
 							pj.cadastraCliPJ();
 							listaPJ.add(pj);
 						}
