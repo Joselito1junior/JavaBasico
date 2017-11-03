@@ -11,7 +11,7 @@ public class MenuPrincipal
 		
 		ClientesPF pf = new ClientesPF();
 		ClientesPJ pj = new ClientesPJ();
-
+		
 		byte opcao = 0;
 		byte opc = -1; //Armazena uma das opções dentro do switch
 		
@@ -61,31 +61,18 @@ public class MenuPrincipal
 						{
 							case 1: for(int i = 0; i < listaPF.size(); i++)
 									{
-										System.out.println("\nOs dados do " + i +"° cliente são:");
-										System.out.println("Nome: " + listaPF.get(i).getNome());
-										System.out.println("CEP: " + listaPF.get(i).getCep());
-										System.out.println("Numero: " + listaPF.get(i).getNumero());
-										System.out.println("Zona: " + listaPF.get(i).getZona());
-										System.out.println("Tipo: " + listaPF.get(i).getTipo());
-										System.out.println("Valor: " + listaPF.get(i).getValor());
-										System.out.println("Valor do seguro: "+ listaPF.get(i).getSeguro());
+										pf = listaPF.get(i);
+										MenuPrincipal.listaClientesPf(i, pf);
 									}
 									break;
 									
 							case 2: for(int i = 0; i < listaPJ.size(); i++)
 									{
-										System.out.println("\nOs dados do " + i +"° cliente são:");
-										System.out.println("Nome: " + listaPJ.get(i).getNome());
-										System.out.println("CEP: " + listaPJ.get(i).getCep());
-										System.out.println("Numero: " + listaPJ.get(i).getNumero());
-										System.out.println("Zona: " + listaPJ.get(i).getZona());
-										System.out.println("Qtd. Funcionarios: " + listaPJ.get(i).getNumFuncionarios());
-										System.out.println("Qtd. Visitas: " + listaPJ.get(i).getNumVisitasDia());
-										System.out.println("Ramo: " + listaPJ.get(i).getRamo());
-										System.out.println("Valor: " + listaPJ.get(i).getValor());
-
+										pj = listaPJ.get(i);
+										MenuPrincipal.listaClientesPJ(i, pj);
 									}
 									break;
+									
 							case 3: break;
 							
 							default: System.out.println("\nInforme uma das opções acima!");
@@ -97,7 +84,13 @@ public class MenuPrincipal
 						
 						switch(opc)
 						{
-							case 1: System.out.println("\nEm qual cadastro deseja incluir o sinistro?");
+							case 1: for(int i = 0; i < listaPF.size(); i++)
+									{
+										pf = listaPF.get(i);
+										MenuPrincipal.listaClientesPf(i, pf);
+									}
+									
+									System.out.println("\nEm qual cadastro deseja incluir o sinistro?");
 									System.out.println("Digite: ");
 									opc = leitor.nextByte();
 									for(int i = 0; i < listaPJ.size(); i++)
@@ -106,5 +99,33 @@ public class MenuPrincipal
 						break;
 			}
 		}while(opcao != -1);
+		leitor.close();
+	}
+	
+	public static void listaClientesPf(int clienteNum, ClientesPF pf){
+		
+		
+		System.out.println("\nOs dados do " + clienteNum +"° cliente são:");
+		System.out.println("Nome: " + pf.getNome());
+		System.out.println("CEP: " + pf.getCep());
+		System.out.println("Numero: " + pf.getNumero());
+		System.out.println("Zona: " + pf.getZona());
+		System.out.println("Tipo: " + pf.getTipo());
+		System.out.println("Valor: " + pf.getValor());
+		System.out.println("Valor do seguro: "+ pf.getSeguro());	
+	}
+	
+	public static void listaClientesPJ(int clienteNum, ClientesPJ pj){
+		
+		System.out.println("\nOs dados do " + clienteNum +"° cliente são:");
+		System.out.println("Nome: " + pj.getNome());
+		System.out.println("CEP: " + pj.getCep());
+		System.out.println("Numero: " + pj.getNumero());
+		System.out.println("Zona: " + pj.getZona());
+		System.out.println("Qtd. Funcionarios: " + pj.getNumFuncionarios());
+		System.out.println("Qtd. Visitas: " + pj.getNumVisitasDia());
+		System.out.println("Ramo: " + pj.getRamo());
+		System.out.println("Valor: " + pj.getValor());
+
 	}
 }
