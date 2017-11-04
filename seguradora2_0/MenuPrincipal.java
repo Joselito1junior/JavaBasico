@@ -1,10 +1,13 @@
 package br.unipe.java.seguradora2_0;
+import java.io.FileWriter;
+import java.io.IOException;
+import java.io.PrintWriter;
 import java.util.ArrayList;
 import java.util.Scanner;
 
 public class MenuPrincipal 
 {
-	public static void main(String[] args) 
+	public static void main(String[] args) throws IOException
 	{
 		ArrayList<ClientesPF> listaPF = new ArrayList<>();
 		ArrayList<ClientesPJ> listaPJ = new ArrayList<>();
@@ -15,7 +18,17 @@ public class MenuPrincipal
 		byte opcao = 0;
 		
 		Scanner leitor = new Scanner(System.in);
-	
+	    ////////////////////////////////////////////////////
+			    
+		FileWriter arq;
+		arq = new FileWriter("Seguradora.txt");
+		PrintWriter gravarArq = new PrintWriter(arq);
+	    
+	    gravarArq.printf("+--Resultado--+%n");
+	    gravarArq.printf("+-------------+%n");
+	    
+	    ////////////////////////////////////////////////////////
+		
 		do 
 		{
 			byte opc = -1; //Armazena uma das opções dentro do switch
@@ -44,6 +57,7 @@ public class MenuPrincipal
 							pf = new ClientesPF();
 							pf.cadastraCliPF();
 							listaPF.add(pf);
+							
 						}
 						else if(opc == 2)
 						{
@@ -99,9 +113,9 @@ public class MenuPrincipal
 									System.out.print("Qual sinistro deseja adicionar\n1 - Furto\\Roubo\n2 - Incêndio\n3 - Inundação\nDigite sua opção: ");
 									opc = leitor.nextByte();
 									
-									listaPF.get(cliente).addSinistro(opc);								
+									listaPF.get(cliente).addSinistro(opc);	
+									break;
 						}
-						break;
 				case 4: System.out.print("Deseja ver os sinistros dos clientes\n1 - PF\n2 - PJ\nDigite sua opção: ");
 						opc = leitor.nextByte();
 						
@@ -118,13 +132,11 @@ public class MenuPrincipal
 									int cliente = leitor.nextByte();
 									
 									listaPF.get(cliente).getSinistro();
+									break;
 						}
-						break;
-				
-				
-				
 			}
 		}while(opcao != -1);
+		arq.close();
 		leitor.close();
 	}
 	
