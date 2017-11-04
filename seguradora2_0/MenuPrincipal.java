@@ -13,12 +13,13 @@ public class MenuPrincipal
 		ClientesPJ pj = new ClientesPJ();
 		
 		byte opcao = 0;
-		byte opc = -1; //Armazena uma das opções dentro do switch
 		
 		Scanner leitor = new Scanner(System.in);
 	
 		do 
 		{
+			byte opc = -1; //Armazena uma das opções dentro do switch
+			
 			System.out.println("----------------------");
 			System.out.println("SEGURADORA");
 			System.out.println("----------------------");
@@ -91,12 +92,37 @@ public class MenuPrincipal
 									}
 									
 									System.out.println("\nEm qual cadastro deseja incluir o sinistro?");
-									System.out.println("Digite: ");
+									System.out.print("Digite: ");
+									
+									int cliente = leitor.nextByte();
+									
+									System.out.print("Qual sinistro deseja adicionar\n1 - Furto\\Roubo\n2 - Incêndio\n3 - Inundação\nDigite sua opção: ");
 									opc = leitor.nextByte();
-									for(int i = 0; i < listaPJ.size(); i++)
-										System.out.print(i +"°Nome: " + listaPJ.get(i).getNome());
+									
+									listaPF.get(cliente).addSinistro(opc);								
 						}
 						break;
+				case 4: System.out.print("Deseja ver os sinistros dos clientes\n1 - PF\n2 - PJ\nDigite sua opção: ");
+						opc = leitor.nextByte();
+						
+						switch(opc)
+						{
+							case 1: for(int i = 0; i < listaPF.size(); i++)
+									{
+										pf = listaPF.get(i);
+										MenuPrincipal.listaClientesPf(i, pf);
+									}
+									
+									System.out.println("\nDeseja verificar o sinistro de qual cliente?");
+									System.out.print("Digite: ");
+									int cliente = leitor.nextByte();
+									
+									listaPF.get(cliente).getSinistro();
+						}
+						break;
+				
+				
+				
 			}
 		}while(opcao != -1);
 		leitor.close();
