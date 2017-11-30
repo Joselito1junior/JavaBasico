@@ -10,7 +10,7 @@ public class Menu implements Serializable {
 	private static Scanner scn2;
 
 	static void inicializacao(){
-        System.out.println("Deseja inicializar um arquivo?");
+        System.out.println("Bem vindo ao teatro! \nDeseja inicializar um arquivo?");
         System.out.println("S - Sim\nN - Não");
         scn = new Scanner(System.in);
        String rec = scn.nextLine();
