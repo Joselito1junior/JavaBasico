@@ -1,19 +1,20 @@
-/**
- * 
- */
 package br.unipe.java.teatro.modelo;
+import java.util.Scanner;
 
-/**
- * @author aluno
- *
- */
 public class Usuario {
 	
 	private String nome;
 	private String cpf;
+	Scanner leitor = new Scanner(System.in);
 	
 	public Usuario(String nome, String cpf) {
 		super();
+		System.out.println("Informe seu nome: ");
+		nome = leitor.nextLine();
+		
+		System.out.println("Informe seu CPF: ");
+		cpf = leitor.nextLine();
+		
 		this.nome = nome;
 		this.cpf = cpf;
 	}
@@ -30,4 +31,5 @@ public class Usuario {
 	public void setCpf(String cpf) {
 		this.cpf = cpf;
 	}
+
 }

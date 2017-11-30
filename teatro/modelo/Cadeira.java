@@ -26,7 +26,7 @@ public class Cadeira {
 	}
 
 	public String toString() {
-		return "Cadeira [posicao=" + posicao + ", usuario=" + usuario + "]";
+		return "Cadeira [posicao=" + posicao + ", usuario=" + this.usuario + "]";
 	}
 
 
