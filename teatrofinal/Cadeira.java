@@ -40,12 +40,12 @@ public class Cadeira implements Serializable {
         int a = 0;
         for (int i = 0; i < usua.length; i++) {
             if(usua[i] == null){
-                System.out.println("Cadeira "+ (i+1) + " está vazia");
+                System.out.println("A posição "+ (i+1) + " está vazia");
                 a++;
             }
            }
         if(a==0){
-            System.out.println("Nenhuma cadeira está disponivel");
+            System.out.println("Não há cadeiras disponiveis");
         }
     }
     
@@ -53,12 +53,12 @@ public class Cadeira implements Serializable {
         int a = 0;
         for (int i = 0; i < usua.length; i++) {
             if(usua[i] != null){
-                System.out.println("Cadeira "+ (i+1) + " está ocupada");
+                System.out.println(" A Posição "+ (i+1) + " está ocupada");
                 a++;
             }
            }
         if(a==0){
-            System.out.println("Nenhuma cadeira está ocupada");
+            System.out.println("Todas as cadeiras estão livres");
         }
     }
 }

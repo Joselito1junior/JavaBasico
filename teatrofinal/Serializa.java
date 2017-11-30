@@ -23,7 +23,7 @@ public class Serializa implements Serializable {
 				fos.close();
 				oos.close();
 			} catch (Exception e) {
-				System.out.println("Erro no serializa");
+				System.out.println("Erro ao serializar");
 				
 			}
 		}
@@ -37,7 +37,7 @@ public class Serializa implements Serializable {
 				fis.close();
 				ois.close();
 			} catch (Exception e) {
-	                System.out.println("Não foi possivel iniciar clientes");
+	                System.out.println("Impossível iniciar clientes");
 			}
 		
 		}
@@ -54,12 +54,12 @@ public class Serializa implements Serializable {
 	            objtIn.close();
 	            
 	        } catch (FileNotFoundException ex) {
-	            System.out.println("Arquivo não existe");    
+	            System.out.println("Arquivo não localizado");    
 	        
 	        }catch (IOException ex) {
-	            System.out.println("Arquivo não existe"); 
+	            System.out.println("Arquivo não localizado"); 
 	        }catch (Exception ex) {
-	            System.out.println("Arquivo não existe"); 
+	            System.out.println("Arquivo não localizado"); 
 	        }
 	        
 	    
@@ -73,7 +73,7 @@ public class Serializa implements Serializable {
 	            objtOut.close();
 	            out.close();
 	        }catch (FileNotFoundException ex) {
-	            System.out.println("Arquivo não existe"); 
+	            System.out.println("Arquivo não localizado"); 
 	        }
 	        catch (IOException ex) {
 	            Logger.getLogger(Serializa.class.getName()).log(Level.SEVERE, null, ex);
