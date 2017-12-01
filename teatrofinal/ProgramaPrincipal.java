@@ -1,6 +1,6 @@
 package br.unipe.java.teatrofinal;
 
-public class CcUnipeTeatro {
+public class ProgramaPrincipal implements Serializable{
     /**
      * @param args the command line arguments
      */

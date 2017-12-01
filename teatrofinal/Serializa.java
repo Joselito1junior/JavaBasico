@@ -12,23 +12,23 @@ import java.util.logging.Level;
 import java.util.logging.Logger;
 
 public class Serializa implements Serializable {
-    
-	   public static ArrayList<Usuario> clientes = new ArrayList<>();
+
+	//private static final long serialVersionUID = 1L;
+	public static ArrayList<Usuario> clientes = new ArrayList<>();
 	   
-	    public static void serializaClientes(String arquivo) {
-			try {
+	    public static void serializaClientes(String arquivo){
+	    try {
 				FileOutputStream fos = new FileOutputStream(arquivo);
 				ObjectOutputStream oos = new ObjectOutputStream(fos);
 				oos.writeObject(clientes);
 				fos.close();
 				oos.close();
-			} catch (Exception e) {
-				System.out.println("Erro ao serializar");
-				
-			}
+		} catch (Exception e) {
+			System.out.println("Erro ao serializar");
 		}
-		
-		
+
+		}
+
 		public static void loadClientes(String arquivo) {
 			try {
 				FileInputStream fis = new FileInputStream(arquivo);
@@ -39,10 +39,7 @@ public class Serializa implements Serializable {
 			} catch (Exception e) {
 	                System.out.println("Impossível iniciar clientes");
 			}
-		
 		}
-	    
-	    
 	    
 	    static void carregarLugares(String nome){
 	        
@@ -61,8 +58,6 @@ public class Serializa implements Serializable {
 	        }catch (Exception ex) {
 	            System.out.println("Arquivo não localizado"); 
 	        }
-	        
-	    
 	    }
 	    
 	    static void salvarLugares(String nome){

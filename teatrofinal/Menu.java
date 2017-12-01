@@ -12,16 +12,21 @@ public class Menu implements Serializable {
 	static void inicializacao(){
         System.out.println("Bem vindo ao teatro! \nDeseja inicializar um arquivo?");
         System.out.println("S - Sim\nN - Não");
+        
         scn = new Scanner(System.in);
-       String rec = scn.nextLine();
-       if(rec.equals("S")){
-           System.out.println("Digite o nome do arquivo: ");
-          String nomeArquivo = scn.nextLine();
+        String rec = scn.nextLine();
+        
+        
+        if(rec.equals("S")){
+        	System.out.println("Digite o nome do arquivo: ");
+        	String nomeArquivo = scn.nextLine();
+          
           Serializa.carregarLugares(nomeArquivo);
           Serializa.loadClientes(nomeArquivo);
-          
        }
     }
+	
+	
     
    static void exibirMenu(){
 		System.out.println("\t\n>>>MENU TEATRO<<<   \n\n");
